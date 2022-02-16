@@ -25,7 +25,6 @@ router.register(r'images', ImageViewSet, 'image')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('register', register_user),
-    path('login', login_user),
+    path('login', register_user),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
